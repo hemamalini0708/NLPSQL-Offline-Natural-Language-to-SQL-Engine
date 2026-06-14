@@ -1,0 +1,27 @@
+[
+  {
+    "question": "show customers who did their payments in 2023",
+    "sql": "SELECT DISTINCT c.* FROM customers c JOIN payments p ON c.customer_id = p.customer_id WHERE EXTRACT(YEAR FROM p.payment_date) = 2023;",
+    "complexity": "MEDIUM"
+  },
+  {
+    "question": "rank customers by total revenue in New York",
+    "sql": "SELECT c.customer_id, c.first_name, c.last_name, SUM(o.total_amount) as total_revenue FROM customers c JOIN orders o ON c.customer_id = o.customer_id WHERE c.city = 'New York' GROUP BY c.customer_id, c.first_name, c.last_name ORDER BY total_revenue DESC;",
+    "complexity": "ADVANCED"
+  },
+  {
+    "question": "monthly trend of total sales in 2024",
+    "sql": "SELECT DATE_TRUNC('month', order_date::date) as month, SUM(total_amount) as monthly_sales FROM orders WHERE EXTRACT(YEAR FROM order_date::date) = 2024 GROUP BY month ORDER BY month;",
+    "complexity": "ADVANCED"
+  },
+  {
+    "question": "find customers from Mumbai who spent more than 5000",
+    "sql": "SELECT c.* FROM customers c JOIN orders o ON c.customer_id = o.customer_id WHERE c.city = 'Mumbai' GROUP BY c.customer_id HAVING SUM(o.total_amount) > 5000;",
+    "complexity": "HARD"
+  },
+  {
+    "question": "show records group by category",
+    "sql": "-- Using product_category from orders as the primary category\nSELECT product_category, COUNT(*) as record_count FROM orders GROUP BY product_category;",
+    "complexity": "MEDIUM"
+  }
+]
