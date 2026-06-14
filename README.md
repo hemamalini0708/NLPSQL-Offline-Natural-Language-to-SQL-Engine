@@ -185,10 +185,18 @@ nlpsql/
 
 ---
 
+
 ## 👩‍💻 Author
 
-**Hema Malini** · [GitHub @hemamalini0708](https://github.com/hemamalini0708)
+**Gangumalla Hema Malini**
+Aspiring AI/ML Engineer | GenAI & RAG Systems Enthusiast
+
+📧 hemamalinig07@gmail.com
+🔗 [LinkedIn](https://linkedin.com/in/hemamalinig07)
+🐙 [GitHub](https://github.com/hemamalini0708)
 
 ---
 
-*Built as a showcase of offline AI engineering — combining local LLMs, semantic search, and production-grade pipeline design without any cloud dependency.*
+## 📄 License
+
+MIT License — free to use and modify with attribution.
