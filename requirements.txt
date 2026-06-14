@@ -1,0 +1,16 @@
+streamlit
+pandas
+numpy
+psycopg2-binary
+pgvector
+ollama
+tqdm
+python-dotenv
+rich
+sqlglot
+tabulate
+sqlalchemy
+psutil
+fastapi
+uvicorn
+python-multipart
